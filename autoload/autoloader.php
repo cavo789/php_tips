@@ -98,7 +98,7 @@ class ClassLoader
 	}
 
 	/**
-	 * Locates a class file
+	 * Locates a class file and load the file when found.
 	 *
 	 * @param  string  $class For instance MyApp\Helpers\HTML
 	 * @return boolean
@@ -109,7 +109,7 @@ class ClassLoader
 		// same namespace of this class (MyApp), we need to search for
 		// a folder caller "Helpers" and not "MyApp" then "Helpers"
 		if (self::startsWith($class, __NAMESPACE__)) {
-			$class = str_replace('MyApp\\', '', $class);
+			$class = str_replace(__NAMESPACE__ . '\\', '', $class);
 		}
 
 		$success = false;
