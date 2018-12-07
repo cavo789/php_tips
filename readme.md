@@ -1,3 +1,5 @@
+![Banner](images/banner.jpg)
+
 # PHP Tricks
 
 > Collection of PHP tips and tricks
