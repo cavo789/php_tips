@@ -90,24 +90,56 @@ function writeDateInFile(): void {
 
 ## Tools
 
-### PHPStan
+### Code Quality
+
+#### PHAN
+
+A static analyzer based on PHP 7+ and the php-ast extension.
+
+> [https://github.com/phan/phan](https://github.com/phan/phan)
+
+#### PHP Copy/Paste Detector
+
+Copy/Paste Detector (CPD) for PHP code.
+
+> [https://github.com/sebastianbergmann/phpcpd](https://github.com/sebastianbergmann/phpcpd)
+
+#### PHP-CS-Fixer
+
+PHP-CS-Fixer, a tool to automatically fix PHP coding standards issues
+
+> [https://github.com/FriendsOfPHP/PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
+
+#### PHPStan
+
+A PHP Static Analysis Tool.
 
 > [https://github.com/phpstan/phpstan](https://github.com/phpstan/phpstan)
 
-Additional rules: 
+Additional rules:
 
 * [PHPStan Strict rules](https://github.com/thecodingmachine/phpstan-strict-rules/)
 
+#### PHP Mess Detector
+
+> [https://github.com/phpmd/phpmd](https://github.com/phpmd/phpmd)
+
+A library that scans code for bugs, sub-optimal code, unused parameters and more.
+
 ### Others
 
-* [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards](https://github.com/squizlabs/PHP_CodeSniffer)
 * [Composer](https://github.com/composer/composer)
 * [PhpUnit](https://github.com/sebastianbergmann/phpunit)
+* [Monolog](https://github.com/Seldaek/monolog)
+* [Xdebug](https://xdebug.org/)
 
 ## Links
 
 * [TheCodingMachine - Best practices](http://bestpractices.thecodingmachine.com/)
-
+* [PHP Framework Interop Group](https://www.php-fig.org/)
+* [PHP The Right Way](https://phptherightway.com/)
 
 ## License
 
