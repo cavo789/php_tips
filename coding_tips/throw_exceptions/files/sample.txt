@@ -1,0 +1,6 @@
+function writeDateInFile(): void {
+    $result = file_put_contents("date", date("Y-m-d"));
+    if (false === $result) {
+        throw new \FileWriteException("There was a problem writing file 'date'");
+    }
+}

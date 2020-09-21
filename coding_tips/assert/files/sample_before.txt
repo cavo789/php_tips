@@ -1,0 +1,14 @@
+public function __construct($id)
+{
+    if ($id !== (int) $id) {
+        throw new \InvalidArgumentException(
+            sprintf('The ID must be an integer. Got: %s',$id)
+        );
+    }
+    
+    if ((int) $id < 1) {
+        throw new \InvalidArgumentException(
+            sprintf('The ID must be a positive integer. Got: %s',$id)
+        );
+    }
+}

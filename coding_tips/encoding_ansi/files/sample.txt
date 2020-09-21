@@ -1,0 +1,23 @@
+
+// Import Mbstring so we can detect the file's encoding (UTF-8, ANSI, ...)
+// Change filepaths to match yours
+include './vendor/symfony/polyfill-mbstring/bootstrap.php';
+include './vendor/symfony/polyfill-mbstring/Mbstring.php';
+
+// Detect the encoding of the uploaded file.
+$line     = fgets(fopen($file, 'r')); // Get the first line from the uploaded file
+$encoding = mb_detect_encoding($line, null, false);
+
+$fromType = 'UTF-8';
+
+if (!$encoding) {
+    // Impossible to detect the encoding type...
+    // Suppose it was Windows-1252 encoded file
+    $fromType = 'Windows-1252';
+} else {
+    $fromType = $encoding;
+}
+
+// Convert to UTF-8 and rewrite the file so accentuated chars are correctly handled now.
+$content = mb_convert_encoding(file_get_contents($file), 'UTF-8', $fromType);
+file_put_contents($file, $content);
